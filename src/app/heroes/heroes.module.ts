@@ -6,21 +6,17 @@ import { ListadoComponent } from './listado/listado.component';
 //HACIENDO MAS EFICIENTE EL USO DE LA APLICACION
 
 @NgModule({
-    //que componente quiero incorporar en mi modulo(que componentas van el modulo)
-    //COMPONENTES QUE VAN EL MODULO
+    //COMPONENTES QUE VAN EL MODULO (Que componentes incluye mi modulo)
     declarations: [
        HeroeComponent,
        ListadoComponent
       ],
-      //que cosas con visibles y publicas fuera del modulo(si no declaro HeroeComponent, no puedo usar el <app-heroe></app-heroe> )
       //COMPONENTES VISIBLES Y PUBLICOS (PARA USAR EN LA VISTA)
       exports: [
         ListadoComponent,
         HeroeComponent
       ],
-      //aca van solo modulos (solo usamos el common , es para los ngif y cosas asi)
-      //por ejemplo en el el modulo principar tendria quqe estar el HeroesModules si queremos usarlo
-      //QUE MODULOS CARGAR EN LA APLICACION
+      //QUE MODULOS CARGAR EN LA APLICACION al inicializar
       imports:
       [
         CommonModule
